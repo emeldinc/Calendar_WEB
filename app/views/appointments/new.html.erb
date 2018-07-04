@@ -1,0 +1,20 @@
+<div style = "margin-top: 4%; margin-left: 1%;">
+<%= form_with scope: :appointment, url: appointments_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :date %><br>
+     <%= date_field(:user, :date) %>
+  </p>
+  <p>
+    <%= form.label :comment %><br>
+    <%= form.text_area :comment %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+</div>
