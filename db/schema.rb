@@ -15,17 +15,9 @@ ActiveRecord::Schema.define(version: 2018_07_04_122755) do
   create_table "appointments", force: :cascade do |t|
     t.string "title"
     t.text "comment"
-    t.datetime "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "appointmentss", force: :cascade do |t|
-    t.string "title"
-    t.text "comment"
     t.date "date"
-    t.time "s_time"
-    t.time "e_time"
+    t.time "start_time"
+    t.time "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -13,4 +13,14 @@
   <strong>Date:</strong>
   <%= @appointment.date %>
 </p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @appointment.start_time.to_formatted_s(:time) %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @appointment.end_time.to_formatted_s(:time) %>
+</p>
 </div>

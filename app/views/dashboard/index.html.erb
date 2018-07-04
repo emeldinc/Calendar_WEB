@@ -6,6 +6,8 @@
     <th>Title</th>
     <th>Text</th>
     <th>Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
   </tr>
  
   <% @appointments.each do |appointment| %>
@@ -13,6 +15,8 @@
       <td><%= appointment.title %></td>
       <td><%= appointment.comment %></td>
       <td><%= appointment.date %></td>
+      <td><%= appointment.start_time.to_formatted_s(:time) %></td>
+      <td><%= appointment.end_time.to_formatted_s(:time) %></td>
      <td><%= link_to 'Show', appointments_path+"/"+appointment.id.to_s %></td>
     </tr>
   <% end %>

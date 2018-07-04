@@ -8,6 +8,16 @@
     <%= form.label :date %><br>
     <%= date_field(:appointment, :date) %>
   </p>
+
+  <p>
+    <%= form.label :Start %><br>
+    <%= time_field(:appointment, :start_time) %>
+  </p>
+
+  <p>
+    <%= form.label :End %><br>
+    <%= time_field(:appointment, :end_time) %>
+  </p>
  
   <p>
     <%= form.label :comment %><br>
