@@ -1,0 +1,32 @@
+  <div style = "margin-top: 4%; margin-left: 1%;">
+    <h1>Edit appointment</h1>
+  <%= form_with(model: @appointment, local: true) do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+    <p>
+      <%= form.label :date %><br>
+      <%= date_field(:appointment, :date) %>
+    </p>
+
+    <p>
+      <%= form.label :Start %><br>
+      <%= time_field(:appointment, :start_time) %>
+    </p>
+
+    <p>
+      <%= form.label :End %><br>
+      <%= time_field(:appointment, :end_time) %>
+    </p>
+
+    <p>
+      <%= form.label :comment %><br>
+      <%= form.text_area :comment %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+  </div>

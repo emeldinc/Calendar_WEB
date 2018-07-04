@@ -1,6 +1,6 @@
 <div style = "margin-top: 4%; margin-left: 1%;">
-<h1>Listing articles</h1>
- 
+<h1>Listing appointments</h1>
+
 <table>
   <tr>
     <th>Title</th>
@@ -9,7 +9,7 @@
     <th>Start Time</th>
     <th>End Time</th>
   </tr>
- 
+
   <% @appointments.each do |appointment| %>
     <tr>
       <td><%= appointment.title %></td>
@@ -21,6 +21,8 @@
       <td><%= link_to 'Delete', appointment_path(appointment),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+
     </tr>
   <% end %>
 </table>
