@@ -3,7 +3,7 @@ class AppointmentsController < ApplicationController
 	end
 
 	def show
-    	@appointment = Appointment.find(params[:id])
+      @appointment = Appointment.find(params[:id])
   	end
 	
 	def create
@@ -11,6 +11,12 @@ class AppointmentsController < ApplicationController
 	  @appointment.save
 	  redirect_to @appointment
 	end
+
+	def destroy
+	    @appointment = Appointment.find(params[:id])
+	    @appointment.destroy
+	 	redirect_to dashboard_path
+  	end
 	 
 	private
 	  def appointment_params

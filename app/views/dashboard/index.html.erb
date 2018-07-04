@@ -4,7 +4,7 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Text</th>
+    <th>Comment</th>
     <th>Date</th>
     <th>Start Time</th>
     <th>End Time</th>
@@ -17,7 +17,10 @@
       <td><%= appointment.date %></td>
       <td><%= appointment.start_time.to_formatted_s(:time) %></td>
       <td><%= appointment.end_time.to_formatted_s(:time) %></td>
-     <td><%= link_to 'Show', appointments_path+"/"+appointment.id.to_s %></td>
+      <td><%= link_to 'Show', appointments_path+"/"+appointment.id.to_s %></td>
+      <td><%= link_to 'Delete', appointment_path(appointment),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
