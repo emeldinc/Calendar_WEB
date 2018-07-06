@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
 	def index
-		@appointments = Appointment.all
+		@appointments = Appointment.search(params[:search])
 	end
 end

@@ -9,7 +9,6 @@ class AppointmentsController < ApplicationController
 
 	def create
 	  @appointment = Appointment.new(appointment_params)
-	 
 	  if @appointment.save
 	    redirect_to @appointment
 	  else
@@ -22,14 +21,15 @@ class AppointmentsController < ApplicationController
 	    @appointment.destroy
 	 	redirect_to dashboard_path
   	end
-		def edit
-			@appointment = Appointment.find(params[:id])
-		end
+
+	def edit
+		@appointment = Appointment.find(params[:id])
+	end
 
 	 def update
-		 	@appointment = Appointment.find(params[:id])
-			 if @appointment.update(appointment_params)
-			 redirect_to @appointment
+	 	@appointment = Appointment.find(params[:id])
+		 if @appointment.update(appointment_params)
+		 redirect_to @appointment
 	 else
 		 render 'edit'
 	 end
