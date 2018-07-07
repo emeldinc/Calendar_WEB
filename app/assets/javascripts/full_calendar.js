@@ -15,7 +15,7 @@ initialize_calendar = function() {
             editable: true,
             eventLimit: true,
             events: '/events.json',
-
+            defaultView: "month"
 
         });
     })
