@@ -42,3 +42,31 @@
 </div>
 
 <div class="calendar"></div>
+<script>
+   var evs = [{
+        title: 'aasdssd',
+            date: '2018-07-07'
+   }];
+
+
+
+   var initialize_calendar;
+   initialize_calendar = function() {
+            $('.calendar').each(function(){
+                    var calendar = $(this);
+                    calendar.fullCalendar({
+                            header: {
+                                left: 'prev,next today',
+                                    center: 'title',
+                                    right: 'month,agendaWeek,agendaDay'
+                            },
+                        contentHeight: 500,
+                            eventBackgroundColor: '#0f4f02',
+                            eventTextColor: '#b6c1c1',
+                            eventLimit: true,
+                            events: evs
+                    });
+                })
+        };
+   $(document).on('turbolinks:load', initialize_calendar);
+</script>
