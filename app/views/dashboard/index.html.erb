@@ -55,7 +55,7 @@
            var dateObj= $(this).children()[2].innerText;
            var temp = {
                title: titleObj,
-               start: dateObj
+               start: dateObj + "T" + $(this).children()[3].innerText
            };
            evs.push(temp);
        });
@@ -74,14 +74,15 @@
                                     right: 'month,agendaWeek,agendaDay'
                             },
                             contentHeight: 500,
-                            eventBackgroundColor: '#0f4f02',
+                            eventBackgroundColor: '#1a7a06',
                             eventTextColor: '#b6c1c1',
                             eventLimit: true,
                             events: evs,
                             dayRender: function (date, cell) {
-                              cell.css("background-color", "#4b4f56")
+                              cell.css("background-color", "#8c939e")
                             },
-                            eventBorderColor: '#0f4f02'
+                            eventBorderColor: '#1a7a06',
+                            timeFormat: 'H(:mm)'
                     });
                 })
         };

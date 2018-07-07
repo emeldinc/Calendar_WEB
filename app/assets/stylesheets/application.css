@@ -56,3 +56,10 @@ nav {
 }
 
 
+a {
+    color: #1a7a06;
+}
+
+a:hover {
+    color: #136301;
+}
