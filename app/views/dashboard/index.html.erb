@@ -21,7 +21,9 @@
       <td><%= link_to 'Delete', appointment_path(appointment),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Recursive', recursive_path(appointment) %></td>
       <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+
       
   </tr>
   <% end %>

@@ -1,0 +1,51 @@
+<div style = "margin-top: 4%; margin-left: 1%;">
+<%= form_with scope: :appointment, url: create_recursive_path, local: true do |form| %>
+ <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@appointment.errors.count, "error") %> prohibited
+        this appointment from being saved:
+      </h2>
+      <ul>
+        <% @appointment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title%>
+  </p>
+  <p>
+    <%= form.label :date %><br>
+    <%= date_field(:appointment, :date) %>
+  </p>
+
+  <p>
+    <%= form.label :Start %><br>
+    <%= time_field(:appointment, :start_time) %>
+  </p>
+
+  <p>
+    <%= form.label :Week %><br>
+    <%= form.text_field :week%>
+  </p>
+
+  <p>
+    <%= form.label :End %><br>
+    <%= time_field(:appointment, :end_time) %>
+  </p>
+ 
+  <p>
+    <%= form.label :comment %><br>
+    <%= form.text_area :comment %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', dashboard_path %>
+</div>

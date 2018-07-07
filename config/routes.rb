@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 	root 'dashboard#index', as: 'dashboard'
 	get 'appointments/new', as: 'new'
 	resources :appointments
+	get "/appointments/recursive/:id", to: "appointments#recursive", as: "recursive"
+	post 'appointments/create_recursive', as: 'create_recursive'
   	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
