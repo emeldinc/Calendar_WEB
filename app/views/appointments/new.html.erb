@@ -1,4 +1,4 @@
-<div style = "margin-top: 4%; margin-left: 1%;">
+<div style = "margin-top: 8%; margin-left: 1%;">
 <%= form_with scope: :appointment, url: appointments_path, local: true do |form| %>
  <% if @appointment.errors.any? %>
     <div id="error_explanation">
@@ -29,12 +29,12 @@
     <%= form.label :End %><br>
     <%= time_field(:appointment, :end_time) %>
   </p>
- 
+
   <p>
     <%= form.label :comment %><br>
     <%= form.text_area :comment %>
   </p>
- 
+
   <p>
     <%= form.submit %>
   </p>
