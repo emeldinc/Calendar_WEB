@@ -4,6 +4,14 @@ class AppointmentsController < ApplicationController
 		@appointment = Appointment.new
 	end
 
+	def delete_all
+		@appointments = Appointment.all
+		@appointments.each do |appointment|
+		 	appointment.destroy
+	    end 
+		redirect_to dashboard_path
+	end
+
 	def show
       @appointment = Appointment.find(params[:id])
   	end

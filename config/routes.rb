@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 	get 'dashboard/index'
 	root 'dashboard#index', as: 'dashboard'
 	get 'appointments/new', as: 'new'
+	get 'appointments/delete_all', as: 'delete_all'
 	resources :appointments
 	get "/appointments/recursive/:id", to: "appointments#recursive", as: "recursive"
 	post 'appointments/create_recursive', as: 'create_recursive'
