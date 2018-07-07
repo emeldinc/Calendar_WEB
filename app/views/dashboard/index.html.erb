@@ -1,3 +1,4 @@
+<div class="calendar" style="margin-top: 150px;"></div>
 <div style = "margin-top: 7%; margin-left: 1%;">
   <h1>Listing Appointments</h1>
   <div class="container" >
@@ -15,7 +16,7 @@
                   <th colspan="4"> Action</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="parent">
             <% @appointments.each do |appointment| %>
               <tr>
                 <td><%= appointment.title %></td>
@@ -32,7 +33,7 @@
             </tr>
             <% end %>
 
-            <tbody>
+            </tbody>
         </table>
 
         </div>
@@ -41,14 +42,26 @@
   </div>
 </div>
 
-<div class="calendar"></div>
+
 <script>
    var evs = [{
-        title: 'aasdssd',
-            date: '2018-07-07'
+       title: 'asdasd',
+       start: '2018-07-07'
    }];
 
 
+       $('#parent').children('tr').each(function () {
+           var titleObj = $(this).children()[0].innerText;
+           var dateObj= $(this).children()[2].innerText;
+           var temp = {
+               title: titleObj,
+               start: dateObj
+           };
+           evs.push(temp);
+       });
+
+
+   console.log(evs);
 
    var initialize_calendar;
    initialize_calendar = function() {
