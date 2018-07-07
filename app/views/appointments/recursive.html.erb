@@ -20,7 +20,7 @@
   </p>
   <p>
     <%= form.label :date %><br>
-    <%= date_field(:appointment, :date) %>
+    <%= date_field(:appointment, :date, readonly: true) %>
   </p>
 
   <p>
@@ -30,7 +30,7 @@
 
   <p>
     <%= form.label :Week %><br>
-    <%= form.text_field :week%>
+    <%= form.text_field :week , :required => true%>
   </p>
 
   <p>

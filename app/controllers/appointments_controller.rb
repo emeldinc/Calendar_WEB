@@ -13,7 +13,7 @@ class AppointmentsController < ApplicationController
   	end
 
   	def create_recursive
-  		i = 0
+	i = 0
 		loop do
 		  i += 1
 		  	params[:appointment][:date] = params[:appointment][:date].to_time.to_i+7.day
