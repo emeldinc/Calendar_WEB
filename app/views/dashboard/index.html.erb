@@ -73,11 +73,15 @@
                                     center: 'title',
                                     right: 'month,agendaWeek,agendaDay'
                             },
-                        contentHeight: 500,
+                            contentHeight: 500,
                             eventBackgroundColor: '#0f4f02',
                             eventTextColor: '#b6c1c1',
                             eventLimit: true,
-                            events: evs
+                            events: evs,
+                            dayRender: function (date, cell) {
+                              cell.css("background-color", "#4b4f56")
+                            },
+                            eventBorderColor: '#0f4f02'
                     });
                 })
         };
