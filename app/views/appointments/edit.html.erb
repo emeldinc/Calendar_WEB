@@ -1,6 +1,16 @@
   <div style = "margin-top: 4%; margin-left: 1%;">
     <h1>Edit appointment</h1>
   <%= form_with(model: @appointment, local: true) do |form| %>
+      <% if @appointment.errors.any? %>
+        <div id="error_explanation">
+
+          <ul>
+            <% @appointment.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
     <p>
       <%= form.label :title %><br>
       <%= form.text_field :title %>
