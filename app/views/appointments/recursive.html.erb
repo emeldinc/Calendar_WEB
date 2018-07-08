@@ -29,8 +29,13 @@
   </p>
 
   <p>
-    <%= form.label :Week %><br>
-    <%= form.text_field :week , :required => true%>
+    <%= form.label :Type %><br>
+    <%= select_tag(:type, options_for_select([['Weekly', 1], ['Monthly', 2], ['Yearly', 3]])) %>
+  </p>
+
+  <p>
+    <%= form.label :Length %><br>
+    <%= form.text_field :length , :required => true%>
   </p>
 
   <p>

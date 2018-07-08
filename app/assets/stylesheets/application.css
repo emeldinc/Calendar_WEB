@@ -37,6 +37,13 @@
     background-color: white;
     border-radius: 8px;
 }
+
+select {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
 li {
     color: red;
 }

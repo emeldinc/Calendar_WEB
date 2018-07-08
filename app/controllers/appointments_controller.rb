@@ -24,16 +24,29 @@ class AppointmentsController < ApplicationController
 	i = 0
 		loop do
 		  i += 1
+		  if params[:type] == '1'
 		  	params[:appointment][:date] = params[:appointment][:date].to_time.to_i+7.day
 		  	params[:appointment][:date] = Time.at(params[:appointment][:date]).strftime("%Y/%m/%d")
-		  	@appointment = Appointment.new(appointment_params)
+		  	
+		  end
+		  if params[:type] == '2'
+		  	params[:appointment][:date] = params[:appointment][:date].to_time.to_i+1.month
+		  	params[:appointment][:date] = Time.at(params[:appointment][:date]).strftime("%Y/%m/%d")
+		  	
+		  end
+		  if params[:type] == '3'
+		  	params[:appointment][:date] = params[:appointment][:date].to_time.to_i+1.year
+		  	params[:appointment][:date] = Time.at(params[:appointment][:date]).strftime("%Y/%m/%d")
+		  	
+		  end
+		  @appointment = Appointment.new(appointment_params)
 			if @appointment.save
 
 			  else
 			    render 'recursive'
 			    break
 			  end
-		  if i == params[:appointment][:week].to_i
+		  if i == params[:appointment][:length].to_i
 		    break      
 		  end
 		end 
