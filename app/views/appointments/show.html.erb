@@ -1,27 +1,27 @@
 <div class="show">
-<p>
-  <strong>Title:</strong>
-  <%= @appointment.title %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @appointment.comment %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @appointment.date %>
-</p>
-
-<p>
-  <strong>Start:</strong>
-  <%= @appointment.start_time.to_formatted_s(:time) %>
-</p>
-
-<p>
-  <strong>End:</strong>
-  <%= @appointment.end_time.to_formatted_s(:time) %>
-</p>
-<%= link_to 'Back', dashboard_path %>
+  <div style="margin-top:5px;margin-bottom:10px;">
+    <table border = "0px" bordercolor="Green"  width="200px">
+      <tr>
+        <td style="text-align:left"><b>Title:</b></td>
+        <td><%= @appointment.title %></td>
+      </tr>
+      <tr>
+        <td style="text-align:left"><b>Comment:</b></td>
+        <td><%= @appointment.comment %></td>
+      </tr>
+      <tr>
+        <td style="text-align:left"><b>Date:</b></td>
+        <td><%= @appointment.date %></td>
+      </tr>
+      <tr>
+        <td style="text-align:left"><b>Start:</b></td>
+        <td><%= @appointment.start_time.to_formatted_s(:time) %></td>
+      </tr>
+      <tr>
+        <td style="text-align:left"><b>End:</b></td>
+        <td><%= @appointment.end_time.to_formatted_s(:time) %></td>
+      </tr>
+    </table>
+  </div>
+  <b><%= link_to 'Back', dashboard_path %></b>
 </div>

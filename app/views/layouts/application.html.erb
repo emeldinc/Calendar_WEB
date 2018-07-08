@@ -13,14 +13,14 @@
 
   <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" style = "color: white;">Beck Calendar</a>
+      <a class="navbar-brand" style = "color: white;"><b>Beck Calendar</b></a>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-             <%= link_to 'Home', dashboard_path %>&emsp;
+             <b><%= link_to 'Home', dashboard_path %></b>&emsp;
           </li>
           <li class="nav-item">
-             <%= link_to 'Create', new_path %>&emsp;
+             <b><%= link_to 'Create', new_path %></b>&emsp;
           </li>
         </ul>
         <div style = "margin-top: 8px;">
@@ -36,4 +36,3 @@
    <%= yield %>
   </body>
 </html>
-
