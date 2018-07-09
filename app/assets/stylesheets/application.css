@@ -64,9 +64,14 @@ nav {
 
 
 a {
-    color: #1a7a06;
+    color: #339966;
 }
 
 a:hover {
-    color: #136301;
+    color: #53c68c;
+    text-decoration: none;
+}
+
+.fc-today {
+    background: #d9f2e6 !important;
 }
