@@ -71,4 +71,5 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
 #gem for jquery
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 3.3.1'
+gem 'thor', '>= 0.14.4'
