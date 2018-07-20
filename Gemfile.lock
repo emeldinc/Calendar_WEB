@@ -206,7 +206,7 @@ DEPENDENCIES
   duktape
   fullcalendar-rails
   jbuilder (~> 2.5)
-  jquery-rails (>= 3.3.1)
+  jquery-rails
   momentjs-rails
   pg
   puma (~> 3.11)
