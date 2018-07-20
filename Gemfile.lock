@@ -207,6 +207,7 @@ DEPENDENCIES
   fullcalendar-rails
   jbuilder (~> 2.5)
   jquery-rails
+  jquery-ui-rails
   momentjs-rails
   pg
   puma (~> 3.11)

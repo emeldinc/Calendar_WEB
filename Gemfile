@@ -12,7 +12,7 @@ gem 'pg'
 group :development do
   gem 'sqlite3'
 end
-gem 'jquery-rails'
+
 group :production do
   gem 'pg'
 end
@@ -71,4 +71,6 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
 #gem for jquery
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'thor', '>= 0.14.4'
