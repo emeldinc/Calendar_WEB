@@ -17,7 +17,8 @@
 //= require jquery-ui
 //= require moment
 //= require fullcalendar
-//= require fullcalendar/locale-all
 //= require_tree .
 
 $('#calendar').fullCalendar({});
+document.addEventListener('turbolinks:load', function () { eventCalendar(); })
+$(document).on('turbolinks:load', initialize_calendar);
