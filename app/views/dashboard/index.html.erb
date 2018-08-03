@@ -1,4 +1,4 @@
-<div class="calendar" style="margin-top: 150px;"></div>
+<div id="calendar" style="margin-top: 150px;"></div>
 <div style = "margin-top: 7%; margin-left: 1%;">
   <h1>Listing Appointments</h1>
   <div class="container" >
@@ -65,7 +65,7 @@
 
    var initialize_calendar;
    initialize_calendar = function() {
-            $('.calendar').each(function(){
+            $('#calendar').each(function(){
                     var calendar = $(this);
                     calendar.fullCalendar({
                             header: {

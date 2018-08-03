@@ -13,7 +13,11 @@
 //= require activestorage
 //= require turbolinks
 //= require moment
-//= require fullcalendar
 //= require jquery_ujs
 //= require jquery-ui
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/locale-all
 //= require_tree .
+
+$('#calendar').fullCalendar({});
