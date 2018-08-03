@@ -46,7 +46,7 @@ class AppointmentsController < ApplicationController
 			    render 'recursive'
 			    break
 			  end
-		  if i == params[:appointment][:length].to_i
+		  if i == params[:length]["{:required=>true}"].to_i
 		    break      
 		  end
 		end 
